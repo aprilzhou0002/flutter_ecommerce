@@ -14,8 +14,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final dark = THelperFunctions.isDarkMode(context);
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(

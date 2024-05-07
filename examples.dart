@@ -28,3 +28,6 @@ class ForgetPassword extends StatelessWidget {
     );
   }
 }
+
+
+// final dark = THelperFunctions.isDarkMode(context);
