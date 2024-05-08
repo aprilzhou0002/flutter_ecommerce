@@ -3,7 +3,6 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/images/t_rounded_image.dart';
 import 'package:t_store/common/widgets/texts/product_title_text.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -82,6 +81,7 @@ class TProductCardVertical extends StatelessWidget {
 
             const Spacer(),
 
+            // Price Row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
