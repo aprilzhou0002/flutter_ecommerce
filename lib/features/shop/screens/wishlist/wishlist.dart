@@ -7,7 +7,6 @@ import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:t_store/features/shop/screens/home/home.dart';
 import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/constants/text_strings.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
@@ -29,10 +28,6 @@ class FavouriteScreen extends StatelessWidget {
             children: [
              TGridLayout(itemCount: 6, itemBuilder: (_,item) => const TProductCardVertical()),
              const SizedBox(height: TSizes.spaceBtwItems),
-        
-        
-        
-        
             ],
           ),
         ),
@@ -40,6 +35,3 @@ class FavouriteScreen extends StatelessWidget {
     );
   }
 }
-
-
-// final dark = THelperFunctions.isDarkMode(context);
