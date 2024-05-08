@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/images/t_rounded_image.dart';
-import 'package:t_store/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:t_store/common/widgets/texts/product_price_text.dart';
 
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
+import '../../../../common/widgets/products/cart/add_remove_button.dart';
+import '../../../../common/widgets/products/cart/cart_item.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class CartScreen extends StatelessWidget {
@@ -16,40 +13,38 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(showBackArrow: true, title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall)),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: ListView.separated(
-            shrinkWrap: true,
-            itemCount: 4,  
-            separatorBuilder: (_, __) => const SizedBox(height: TSizes.spaceBtwSections), 
-            itemBuilder: (_, index) => Column(
-              children: [
-                Row(
-                  children: [
-                    // Image
-                    TRoundedImage(
-                      imageUrl: TImages.productImage1,
-                      width: 60,
-                      height: 60,
-                      padding: EdgeInsets.all(TSizes.sm),
-                      backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.darkerGrey : TColors.light,
-                    ),
-                    const SizedBox(width: TSizes.spaceBtwItems),
-
-                    // Title, Price & Size
-                    Column(
-                      children: [
-                        TBrandTitleWithVerifiedIcon(title: title)
-                      ],
-                    )
-                  ],
-                )
-              ],
-            ),
+      body: Padding(
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        child: ListView.separated(
+          shrinkWrap: true,
+          itemCount: 10,  
+          separatorBuilder: (_, __) => const SizedBox(height: TSizes.spaceBtwSections), 
+          itemBuilder: (_, index) => const Column(
+            children: [
+              TCartItem(),
+              SizedBox(height: TSizes.spaceBtwItems),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(width: 70),
+                      TProductQuantityWithAddRemoveButton(),
+                    ],
+                  ),
+                  TProductPriceText(price: '256'),
+                ]
+              ) 
+            ],
           ),
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        child: ElevatedButton(onPressed: (){}, child: const Text('Checkout \$256.0')),
       ),
     );
   }
 }
+
+
