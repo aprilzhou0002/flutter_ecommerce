@@ -12,7 +12,7 @@ class TBillingAddressSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TSectionHeading(title: 'Shipping Address', buttonTitle: 'Change', onPressed: (){}),
-        Text('April', style: Theme.of(context).textTheme.bodyLarge),
+        Text('Jason', style: Theme.of(context).textTheme.bodyLarge),
         const SizedBox(height: TSizes.spaceBtwItems / 2),
 
         Row(

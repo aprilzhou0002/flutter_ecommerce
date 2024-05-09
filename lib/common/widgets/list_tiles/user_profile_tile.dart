@@ -22,7 +22,7 @@ class TUserProfileTile extends StatelessWidget {
         height: 50,
         padding: 0,
       ),
-      title: Text('April', style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white)),
+      title: Text('Jason', style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white)),
       subtitle: Text('support@hotmail.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white)),
       trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: TColors.white)),
     );
