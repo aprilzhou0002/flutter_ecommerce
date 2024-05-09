@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:t_store/common/widgets/products/rating/rating_indicator.dart';
+import 'package:t_store/common/widgets/products/ratings/rating_indicator.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../utils/constants/colors.dart';

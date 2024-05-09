@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 
-import '../../../../common/widgets/products/rating/rating_indicator.dart';
+import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'widgets/rating_progress_indicator.dart';
 import 'widgets/user_review_card.dart';
